@@ -1,0 +1,60 @@
+using System;
+
+namespace MATHEMATICALFORMULAS01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //tell the user what he is doing
+            Console.WriteLine("We will calculate the area and circumference of a cirle");
+
+            //find the radius
+            Console.WriteLine("insert the radius:");
+            string radius = Console.ReadLine();
+            double radius2 = double.Parse(radius);
+            
+            //multiply the radius by 2 ad PI and and to find area multiply PI by the rad * rad
+            double circumference = radius2 * 2 * Math.PI;
+            double area = radius2 * radius2 * Math.PI;
+            double volume = (4 / 3 * Math.PI * Math.Pow(radius2, 3)) / 2;
+            Console.WriteLine($"Radius is {radius} and circumference is {circumference} and the area {area}");
+
+            Console.WriteLine(); 
+
+            //tell the user what he is doing
+            Console.WriteLine("We will find the area of a triangle given three sides");
+
+            //plug in to the equation what Ax^2,BxC are 
+            Console.WriteLine("side A length: ");
+            string sideA = Console.ReadLine();
+            double sA = double.Parse(sideA);
+            Console.WriteLine("side B length: ");
+            string sideB = Console.ReadLine();
+            double sB = double.Parse(sideB);
+            Console.WriteLine("side C length: ");
+            string sideC = Console.ReadLine();
+            double sC = double.Parse(sideC);
+            //solve for P
+            double HalfCir = (sA + sB + sC) / 2;
+            double TriangleArea = Math.Sqrt(HalfCir) * (HalfCir - sA) * (HalfCir - sB) * (HalfCir - sC);
+            Console.WriteLine($" P is {HalfCir} Area {TriangleArea}");
+
+            //solve for quadratic equation 
+            Console.WriteLine("solve for the quadratic equation ");
+
+            Console.WriteLine("Insert A ");
+            string QuadA = Console.ReadLine();
+            int QA = int.Parse(QuadA);
+
+            Console.WriteLine("Insert B ");
+            string QuadB = Console.ReadLine();
+            int QB = int.Parse(QuadB);
+
+            Console.WriteLine("Insert C ");
+            string QuadC = Console.ReadLine();
+            int QC = int.Parse(QuadC);
+            double F1 = -QB + Math.Sqrt ((QB * QB)) - (4 * QA * QC);
+            double F2 = -QB - Math.Sqrt((QB * QB)) - (4 * QA * QC);
+            double X1 = F1 / (2 * QA);
+            double X2 = F2 / (2 * QA); 
