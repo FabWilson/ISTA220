@@ -1,0 +1,84 @@
+﻿using System;
+
+namespace ISTA220EXERCISE2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int start = 0;
+            int end = 10;
+            int sum = 0;
+            get_sum(start, end, sum);
+        }
+
+        private static void get_sum(int start, int end, int sum)
+        {
+            Console.WriteLine($"get_sum({start}, {end}, {sum})");
+            start = start + 1;
+            sum = sum + start;
+            if (start < end)
+                get_sum(start, end, sum);
+            else
+                Console.WriteLine($"The sum is {sum}");
+
+            //tell the user what I'm going to do
+
+            //ask the use for input
+
+            //read the input
+
+            //decide what the letter grade is
+
+            Char Grade = 'F';
+
+            //what is your grade
+            Console.WriteLine("input grade score");
+            int userinput = Convert.ToInt32(Console.ReadLine());
+            if (userinput >= 90)
+            {
+                Grade = 'A';
+            }
+
+            else if (userinput >= 80 && userinput < 90)
+            {
+                Grade = 'B';
+            }
+
+            else if (userinput >= 70 && userinput < 80)
+
+            {
+                Grade = 'C';
+            }
+
+            else if (userinput >= 60 && userinput < 70)
+
+            {
+                Grade = 'D';
+            }
+
+            else if (userinput >= 50 && userinput < 60)
+
+            {
+                Grade = 'F';
+
+            }
+
+            Console.WriteLine($"You Grade is: {Grade}");
+
+        }
+
+        //tell the user what I'm going to do
+
+        //ask the use for input
+
+        //read the input
+
+        //get the average to the score
+
+        //assign a letter grade to the student
+
+
+
+    }
+}
